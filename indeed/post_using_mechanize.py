@@ -1,18 +1,18 @@
 import mechanize
 
 
-def post_data(**kwargs):
+def post_data():
 
     # url
     url_add = "http://www.indeed.com"
 
     # details
-    details = {"q":"Python Developer", "l":"Santa Clara, CA"}
+    details = {"q": "Python Developer", "l": "Santa Clara, CA"}
 
     # search based on job title and place
     browser = mechanize.Browser(factory=mechanize.RobustFactory())
     browser.set_handle_robots(False)
-    
+
     # open the absloute url
     browser.open(url_add)
 
@@ -26,4 +26,6 @@ def post_data(**kwargs):
     return browser.submit()
 
 if __name__ == "__main__":
+    #import sys
+    #sys.stdout.write(post_data().read())
     pass
