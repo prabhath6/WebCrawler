@@ -4,38 +4,35 @@
 
 Given input what= "Python Developer" where="Santa Clara, CA"
 
-Company: 'Datastax' 
+1. Company: 'Datastax' 
 
-title: 'Software Engineer in Test - Cassandra' 
-
-city: 'Santa Clara' 
-
-country: 'US'
-
-
-Company: 'Inficare Technologies' 
-
-title: 'Python Developer_CA' 
-
-city: 'Sunnyvale' 
-
-country: 'US'
+  title: 'Software Engineer in Test - Cassandra' 
+  
+  city: 'Santa Clara' 
+  
+  country: 'US'
+  
 
 
-Company: 'Evernote' 
+2. Company: 'Inficare Technologies' 
 
-title: 'Software Engineer in Test' 
+  title: 'Python Developer_CA' 
+  
+  city: 'Sunnyvale' 
+  
+  country: 'US'
+  
 
-city: 'Redwood City' 
 
-country: 'US'
+3. Company: 'Evernote' 
 
+  title: 'Software Engineer in Test' 
+  
+  city: 'Redwood City' 
+  
+  country: 'US'
 
-Company: 'Xoriant Corporation' 
-
-title: 'Python Developer' 
-
-city: 'Santa Clara' 
-
-country: 'US'
-
+4. Company: 'Xoriant Corporation' 
+  title: 'Python Developer' 
+  city: 'Santa Clara' 
+  country: 'US'
