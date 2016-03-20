@@ -1,27 +1,29 @@
-from mechanize import urljoin, urlopen, ParseResponse
+import mechanize
 
 
-def post_data(url_add, **kwargs):
+def post_data(**kwargs):
+
+    # url
+    url_add = "http://www.indeed.com"
+
+    # details
+    details = {"q":"Python Developer", "l":"Santa Clara, CA"}
 
     # search based on job title and place
-    query = "jobs?q=&l="
-
+    browser = mechanize.Browser(factory=mechanize.RobustFactory())
+    browser.set_handle_robots(False)
+    
     # open the absloute url
-    response = urlopen(urljoin(url, query))
+    browser.open(url_add)
 
     # select the form
-    forms = ParseResponse(response, backwards_compat=False)
-    form = forms[0]
+    browser.select_form(nr = 0)
 
     # fill the form
-    form["q"] = kwargs.get("q")
-    form["l"] = kwargs.get("l")
+    browser.form["q"] = details.get("q", "")
+    browser.form["l"] = details.get("l", "")
 
-    return urlopen(form.click()).read()
+    return browser.submit()
 
 if __name__ == "__main__":
-
-    # url to post the data.
-    url = "http://www.indeed.com"
-    post_data(url, q="Python Developer", l="Santa Clara, CA")
-
+    pass
