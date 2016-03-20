@@ -32,7 +32,12 @@ Given input what= "Python Developer" where="Santa Clara, CA"
   
   country: 'US'
 
-4. Company: 'Xoriant Corporation' 
+4. Company: 'Xoriant Corporation'
+
   title: 'Python Developer' 
+  
   city: 'Santa Clara' 
+  
   country: 'US'
+  
+  
