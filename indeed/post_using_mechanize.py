@@ -14,13 +14,14 @@ def post_data(url_add, **kwargs):
     form = forms[0]
 
     # fill the form
-    form["q"] = kwargs["q"]
-    form["l"] = kwargs["l"]
+    form["q"] = kwargs.get("q")
+    form["l"] = kwargs.get("l")
 
     return urlopen(form.click()).read()
 
 if __name__ == "__main__":
+
     # url to post the data.
     url = "http://www.indeed.com"
+    post_data(url, q="Python Developer", l="Santa Clara, CA")
 
-    post_data(url, {"q": "Python Developer", "l": "Santa Clara, CA"})
